@@ -1,7 +1,7 @@
 webserver_image: nginx:latest
 webserver_name: Nginx
-webserver_src_port: 80
-webserver_dest_port: 5080
+webserver_src_port: 5080
+webserver_dest_port: 80
 # webserver_src_vol: /app/ansible/nginx
 # webserver_dest_vol: /etc/nginx
 privileged: true

@@ -5,7 +5,7 @@
    become: yes
    shell: docker ps -a
 
- - name: "Check if python is installed"
+ - name: "Check if mysql is installed"
    package_facts:
       manager: "auto"
 
@@ -13,7 +13,6 @@
    debug:
       msg: "Python found"
    when: "'python' in ansible_facts.packages"
-
 
 
  - name: Starting the Nginx Docker Container
