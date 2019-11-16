@@ -1,0 +1,17 @@
+---
+  - hosts: webservers
+
+    roles:
+      - webservers
+    
+  # - hosts: redis
+
+  #   roles:
+  #     - redis
+  
+
+  # - hosts: dbservers
+    
+  #   roles:
+  #     - dbservers
+
