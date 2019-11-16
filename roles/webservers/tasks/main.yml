@@ -5,6 +5,26 @@
    become: yes
    shell: docker ps -a
 
+ - name: Checking presence of python
+   package_facts:
+     manager: "auto"
+
+ - name: "package presence test result"
+   debug:
+     msg: "Python packasge is preset"
+   when: "'python' in ansible_facts.packages"
+
+ - name: "Check if python is installed"
+   package_facts:
+      manager: "auto"
+
+ - name: python installation check
+   debug:
+      msg: "Python found"
+   when: "'python' in ansible_facts.packages"
+
+
+
  - name: Starting the Nginx Docker Container
    become: yes
    docker_container:
